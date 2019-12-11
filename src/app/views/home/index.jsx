@@ -10,7 +10,6 @@ import React from 'react';
 
 const initState = {
     empply: "",
-
 }
 
 export default class Home extends React.Component
@@ -24,11 +23,9 @@ export default class Home extends React.Component
     render ()
     {
         return (
-            <React.Fragment>
-                <section>
-                    <h1>Hello world</h1>
-                </section>
-            </React.Fragment>
+            <div className='container'>
+                <h1>Hello Geek</h1>
+            </div>
         );
     }
 }

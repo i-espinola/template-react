@@ -15,12 +15,12 @@
   "main": "server/index.js",
   "homepage": ".",
   "scripts": {
-    "build": "npm run clean && react-scripts build",
     "clean": "rm -rf build package-lock.json npm-debug.log",
-    "dev": "react-scripts start",
     "start": "npm run build && node server/index.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "npm run clean && react-scripts build",
+    "eject": "react-scripts eject",
+    "dev": "react-scripts start",
+    "test": "react-scripts test"
   },
   "dependencies": {
     "react": "*",
@@ -28,7 +28,6 @@
     "react-scripts": "*",
     "prop-types": "*",
     "serve-handler": "*",
-    "history": "*",
     "react-router-dom": "*"
   },
   "devDependencies": {
