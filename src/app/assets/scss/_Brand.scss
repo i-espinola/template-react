@@ -1,0 +1,18 @@
+﻿@import 'Variables';
+
+aside {
+
+    &.brand {
+        color: $white;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        background: transparent;
+        font-size: 2rem;
+
+        i {
+            font-style: normal;
+            color: $pink;
+        }
+    }
+}

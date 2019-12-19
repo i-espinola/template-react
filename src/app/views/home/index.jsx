@@ -1,35 +1,82 @@
-// import PropTypes from 'prop-types';
-import React from 'react';
+﻿import React from 'react'
 
-// Components imports
-// // import NameComponent from '../../components/NameComponent';
+// dependencys
+import PropTypes from 'prop-types'
 
-// Images imports
-// import NameImage from '../../assets/img';
+// Style
+import '../../assets/scss/Home.scss'
 
-
-const initState = {
-    empply: "",
-}
+// Components Childs
+import Card from '../../components/Card'
 
 export default class Home extends React.Component
 {
     constructor (props)
     {
-        super(props);
-        this.state = { ...initState }
+        super(props)
+        this.state = {
+			title: props.data.title,
+			subtitle: props.data.subtitle,
+		}
     }
 
-    render ()
+    cardHeader = () =>
     {
         return (
-            <div className='container'>
-                <h1>Hello Geek</h1>
+            <React.Fragment>
+                <h1>{ this.props.data.title }</h1>
+            </React.Fragment>
+        )
+    }
+
+    cardBody = () =>
+    {
+        return (
+			<React.Fragment>
+				<h3>{this.props.data.subtitle}</h3>
+				<div className="btn-group">
+					<button
+						className="primary"
+						onClick={() => this.changeProps()}
+					>
+						DataFlow test
+					</button>
+					<button
+						className="secondary"
+						onClick={() => this.changeProps()}
+					>
+						Reset
+					</button>
+				</div>
+			</React.Fragment>
+		)
+    }
+
+    changeProps = () =>
+    { 
+        debugger
+        const title = this.state.title === this.props.data.title ? 'Title changed with sucess' : this.state.title
+        const subtitle = this.state.subtitle === this.props.data.subtitle ? 'changed with sucess by dataFlow method' : this.state.subtitle
+        const arrData = [
+			['title', title],
+			['subtitle', subtitle],
+		]
+        arrData.map(data => this.props.dataFlow(data))
+    }
+
+    render = () =>
+    {
+        return (
+            <div className="container-fluid">
+                <Card header={ this.cardHeader() } >
+                    { this.cardBody() }
+                </Card>
             </div>
-        );
+        )
     }
 }
 
-// Home.propTypes = {
-//     name: PropTypes.array,
-// }
+Home.propTypes = {
+	dataFlow: PropTypes.func.isRequired,
+	data: PropTypes.object.isRequired,
+}

@@ -1,0 +1,52 @@
+@import 'Variables';
+
+div {
+
+    &.field-group {
+        margin-bottom: 1rem;
+        flex: 1 100%;
+    
+        >label {
+            display: block;
+            font-size: .735rem;
+            letter-spacing: 1px;
+            margin-bottom: .5rem;
+        }
+
+        &.error {
+            text-transform: uppercase;
+            letter-spacing: .04rem;
+            font-size: $font-small;
+            font-weight: bold;
+            text-align: center;
+            color: $orange;
+        }
+    }
+
+    textarea,
+    input {
+        width: 100%;
+        color: $font-color;
+        font-size: $font-medium;
+        line-height: normal;
+        text-align: left;
+        display: inline-block;
+        border-radius: $radius;
+        background: $white;
+        border: 1px solid $white;
+        box-sizing: border-box;
+        overflow-y: hidden;
+        resize: none;
+        padding: 5px 15px;
+        transition: $transition;
+        -o-transition: $transition;
+        -moz-transition: $transition;
+        -webkit-transition: $transition;
+
+        &:focus,
+        &:active,
+        &:hover {
+            box-shadow: 0px 0px 7px 0px $white;
+        }
+    }
+}

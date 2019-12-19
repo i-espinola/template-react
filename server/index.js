@@ -1,18 +1,32 @@
-const handler = require('serve-handler')
-const http = require('http')
-const port = process.env.PORT || 3000
-const app = "./build/"
+var setup = {
+    path: process.env.INIT_CWD || __dirname,
+    port: process.env.PORT || 3000,
+    request: '/*',
+    public: 'build/',
+    file: 'index.html',
+    favicon: '/build/favicon.ico',
+    banner: '\nExpress server on\n'
+}
 
-const server = http.createServer((request, response) => {
-	// You pass two more arguments for config and middleware
-	// More details here: https://github.com/zeit/serve-handler#options
-	return handler(request, response, {
-        cleanUrls: true,
-        public: app
-    });
+// Express server
+// To run in production
+const http = require('http')
+const favicon = require('express-favicon')
+const express = require('express')
+const path = require('path')
+const app = express()
+
+app.use(favicon(setup.path + setup.favicon))
+app.use(express.static(setup.path))
+app.use(express.static(path.join(setup.path, setup.public)))
+app.get(setup.request, (request, response) =>
+{
+    response.sendFile(path.join(setup.path, setup.public, setup.file))
 })
 
-server.listen(port, () =>
+// Start Serve
+var server = http.createServer(app)
+server.listen(setup.port, () =>
 {
-	console.log('Server on')
+    console.log(setup.banner)
 })

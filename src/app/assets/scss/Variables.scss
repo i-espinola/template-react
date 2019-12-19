@@ -1,0 +1,69 @@
+﻿$primary: #0035ad;
+$secondary: #001976;
+$mark: #e71b4e;
+
+$gradient: linear-gradient(45deg, $primary 0, $secondary 100%);
+
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
+
+$gray-light: $gray-400;
+$gray: #8d8d8d;
+$gray-dark: $gray-700;
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$font-small: 0.735rem;
+$font-medium: 1rem;
+$font-big: 2.2rem;
+
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 700;
+
+$font-color: $gray-600;
+$font-family: 'Montserrat', sans-serif;
+$font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+
+$border-white: 1px solid $white;
+$border-light: 1px solid $gray-300;
+$border-grey: 1px solid $gray-500;
+$border-dark: 1px solid $gray-800;
+$border-black: 1px solid $black;
+$border-bold: 2px;
+
+$shadow: 0px 5px 10px 0px transparentize($black, .7);;
+$radius: .375rem;
+$transition: all .2s ease-in;

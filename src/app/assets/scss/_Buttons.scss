@@ -1,0 +1,187 @@
+@import 'Variables';
+
+button {
+        border: none;
+        padding: 10px 30px;
+        font-weight: bold;
+        color: $white;
+        background: transparent;
+        font-size: $font-medium;
+        border-radius: $radius;
+        transition: $transition;
+        -o-transition: $transition;
+        -moz-transition: $transition;
+        -webkit-transition: $transition;
+
+        &.primary {
+            background: $primary;
+            color: $white;
+            opacity: 0.9;
+            
+            &:focus,
+            &:active,
+            &:hover {
+                box-shadow: none;
+                opacity: 1;
+            }
+        }
+
+        &.secondary {
+            background: $secondary;
+            color: $white;
+            opacity: 0.9;
+            
+            &:focus,
+            &:active,
+            &:hover {
+                box-shadow: none;
+                opacity: 1;
+            }
+        }
+
+        &.light {
+            background: transparentize($white, .8);
+            color: $white;
+            
+            &:focus,
+            &:active,
+            &:hover {
+                color: $primary;
+                background: $white;
+                box-shadow: none;
+            }
+        }
+        
+        &.icon {
+            justify-content: center;
+            align-items: center;
+            background: $mark;
+            display: flex;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            font-size: 1.3rem;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+
+            &:focus,
+            &:active,
+            &:hover {
+                box-shadow: 0px 0px 10px 0px $gray-900;
+                transform: rotate(-180deg);
+                -o-transform: rotate(-180deg);
+                -ms-transform: rotate(-180deg);
+                -moz-transform: rotate(-180deg);
+                -webkit-transform: rotate(-180deg);
+            }
+        }
+
+        &:only-child {
+            flex: 1;
+            margin: 0 20px;
+            border-radius: $radius;
+        }
+
+        &:disabled {
+            opacity: .5;
+            cursor: no-drop;
+        }
+    }
+
+.btn-group {
+    white-space: nowrap;
+
+        > button {
+            color: $gray-500;
+            border: 1px solid $gray-500;
+            border-radius: 0;
+            flex: 1;
+
+            &.primary {
+                border: 1px solid transparentize($primary, .01);
+                background: transparentize($primary, .01);
+                color: $white;
+                
+                &:focus,
+                &:active,
+                &:hover {
+                    color: $white;
+                    background: $primary;
+                    border-color: $primary;
+                    
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+
+            &.secondary {
+                border: 1px solid $gray-600;
+                background: transparent;
+                color: $gray-600;
+                
+                &:focus,
+                &:active,
+                &:hover {
+                    color: $white;
+                    background: $secondary;
+                    border-color: $secondary;
+                    
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+
+            &.primary-light {
+                border: 1px solid $white;
+                background: transparentize($white, .9);
+                color: $white;
+                
+                &:focus,
+                &:active,
+                &:hover {
+                    color: $primary;
+                    background: $white;
+                    border-color: $white;
+                    
+                    i {
+                        color: $primary;
+                    }
+                }
+            }
+
+            &.secundary-light {
+                border: 1px solid $white;
+                background: transparent;
+                color: $white;
+                
+                &:focus,
+                &:active,
+                &:hover {
+                    color: $primary;
+                    background: $white;
+                    border-color: $white;
+                    
+                    i {
+                        color: $primary;
+                    }
+                }
+
+            }
+
+            &:first-child {
+                border-right: 0;
+                border-radius: $radius 0 0 $radius;
+            }
+            
+            &:last-child {
+                border-left: 0;
+                border-radius: 0 $radius $radius 0;
+            }
+        }
+}
+

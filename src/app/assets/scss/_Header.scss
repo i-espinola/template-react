@@ -1,0 +1,10 @@
+﻿@import 'Variables';
+
+header {
+    height: auto;
+    width: 100vw;
+    position: relative;
+    background: $gradient;
+    padding-bottom: 150px;
+    box-sizing: border-box;
+}
