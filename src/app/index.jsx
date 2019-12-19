@@ -7,9 +7,6 @@ import { BrowserRouter } from "react-router-dom"
 import Header from './components/Header'
 import Routes from './Routes'
 
-// Style
-// import './assets/scss/Main.scss'
-
 const initState = {
 	title: 'Welcome Geek',
 	subtitle: 'Is the React boilerplate template',
