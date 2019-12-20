@@ -1,10 +1,10 @@
 
 // Express server
 // To run in production
-const setup = require('./setup')
-const http = require('http')
 const favicon = require('express-favicon')
 const express = require('express')
+const setup = require('./setup')
+const http = require('http')
 const path = require('path')
 
 const app = express()

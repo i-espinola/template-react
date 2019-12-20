@@ -1,6 +1,6 @@
 {
   "name": "template-react",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Template client side with Reactjs at create-react-app",
   "private": false,
   "repository": {
@@ -11,14 +11,15 @@
     "url": "https://github.com/i-espinola/template-react/issues"
   },
   "readme": "https://github.com/i-espinola/template-react#readme",
-  "license": "https://github.com/i-espinola/template-react/blob/master/LICENSE",
+  "license": "MIT",
   "main": "server/index.js",
   "homepage": ".",
   "scripts": {
-    "clean": "rm -rf build package-lock.json npm-debug.log",
-    "local": "rm -rf /var/www/localServer/public/* && cp -R ./* /var/www/localServer/public/ && cd /var/www/localServer/public/ && npm run build && node /var/www/localServer/backend/server.js",
-    "start": "npm run build && pm2 start server/index.js",
+    "clean": "rm -rf build package-lock.json npm-debug.log server/logs/*",
     "build": "npm run clean && react-scripts build",
+    "local": "rm -rf /var/www/localServer/public/* && cp -R ./* /var/www/localServer/public/ && cd /var/www/localServer/public/ && npm run build && node /var/www/localServer/backend/server.js",
+    "stop": "pm2 stop ecosystem.config.js && pm2 delete ecosystem.config.js",
+    "start": "npm run build && pm2-runtime start ecosystem.config.js --env production",
     "eject": "react-scripts eject",
     "dev": "react-scripts start",
     "test": "react-scripts test"
@@ -27,6 +28,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
+    "node-sass": "^4.13.0",
     "pm2": "^4.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -46,8 +48,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "node-sass": "^4.13.0"
+    "eslint-plugin-standard": "^4.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"

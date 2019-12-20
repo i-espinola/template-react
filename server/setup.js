@@ -1,7 +1,7 @@
 const setup = {
 	path: process.env.INIT_CWD || __dirname,
-	file: 'index.html',
-	public: 'build/',
+	file: '/index.html',
+	public: '/build',
 	request: '/*',
 	port: process.env.PORT || 3000,
 	headers: {
@@ -12,7 +12,7 @@ const setup = {
 			'Origin, X-Requested-With, Content-Type, Accept',
 	},
 	banner: '\nExpress server run in port',
-	favicon: 'build/favicon.ico',
+	favicon: '/build/favicon.ico',
 	status200: {
 		code: 200,
 		message: 'Ok',

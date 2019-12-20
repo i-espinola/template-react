@@ -67,7 +67,7 @@ export default class Home extends React.Component
     render = () =>
     {
         return (
-            <div className="container-fluid">
+            <div className="container">
                 <Card header={ this.cardHeader() } >
                     { this.cardBody() }
                 </Card>
