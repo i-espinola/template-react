@@ -5,9 +5,9 @@ module.exports = {
 			script: './server/index.js',
 
 			// Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
+			// out_file: './server/logs/out.log',
 			error_file: './server/logs/err.log',
-			out_file: './server/logs/out.log',
-			log_file: './server/logs/combined.log',
+			// log_file: './server/logs/combined.log',
 			time: true,
 			args: 'one two',
 			instances: 'max',
