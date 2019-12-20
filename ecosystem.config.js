@@ -6,15 +6,15 @@ module.exports = {
 
 			// Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
 			// out_file: './server/logs/out.log',
-			error_file: './server/logs/err.log',
-			// log_file: './server/logs/combined.log',
+			// error_file: './server/logs/err.log',
+			log_file: './server/logs/combined.log',
 			time: true,
 			args: 'one two',
-			instances: 'max',
-			// instances: 1,
+			// instances: 'max',  // Is for Heroku
+			instances: 1,
 			autorestart: true,
 			watch: true,
-			// max_memory_restart: '512M',
+			max_memory_restart: '512M', // REMOVE FOR HEROKU
 			env: {
 				NODE_ENV: 'development',
 			},
