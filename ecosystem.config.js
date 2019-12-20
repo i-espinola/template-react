@@ -8,13 +8,13 @@ module.exports = {
 			// out_file: './server/logs/out.log',
 			// error_file: './server/logs/err.log',
 			log_file: './server/logs/combined.log',
-			time: true,
-			args: 'one two',
-			// instances: 'max',  // Is for Heroku
-			instances: 1,
-			autorestart: true,
-			watch: true,
-			max_memory_restart: '512M', // REMOVE FOR HEROKU
+			// time: true,
+			// watch: true,
+			// instances: 1,
+			// args: 'one two',
+			// autorestart: true,
+			instances: 'max',  // Is for Heroku
+			// max_memory_restart: '512M', // REMOVE FOR HEROKU
 			env: {
 				NODE_ENV: 'development',
 			},
